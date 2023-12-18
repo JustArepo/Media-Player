@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backkk"
+    android:background="@color/black"
     android:padding="20dp"
     android:paddingRight="15dp"
     tools:context=".MainActivity">
@@ -21,17 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/waves"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/spot"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/dhickchik" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -85,18 +74,21 @@
         app:layout_constraintTop_toBottomOf="@id/textView"
         app:srcCompat="@drawable/heart" />
 
-    <SeekBar
+    <com.google.android.material.slider.Slider
         android:id="@+id/progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:progress="50"
-        android:progressBackgroundTint="#BF2A2A"
-        android:progressDrawable="@drawable/seek_bar"
-        android:thumb="@drawable/seek_thumb"
+        android:value="50.0"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
         app:layout_constraintLeft_toLeftOf="@id/singer"
         app:layout_constraintRight_toRightOf="@id/singer"
-        app:layout_constraintTop_toBottomOf="@id/singer" />
+        app:layout_constraintTop_toBottomOf="@id/singer"
+        app:thumbColor="#EF1111"
+        app:trackColorActive="#79CC19"
+        app:trackColorInactive="@color/white"
+        app:trackHeight="10dp"
+        />
 
     <TextView
         android:id="@+id/textView2"
@@ -118,7 +110,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="-2:54"
-
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
