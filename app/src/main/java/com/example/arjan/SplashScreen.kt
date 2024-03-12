@@ -14,6 +14,7 @@ class SplashScreen : AppCompatActivity() {
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         actionBar?.hide()
+
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
